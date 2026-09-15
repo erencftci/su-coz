@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GaleriRouteImport } from './routes/galeri'
+import { Route as HakkimizdaRouteImport } from './routes/hakkimizda'
+import { Route as HizmetlerRouteImport } from './routes/hizmetler'
+import { Route as IletisimRouteImport } from './routes/iletisim'
+import { Route as IskiDanismanlikRouteImport } from './routes/iski-danismanlik'
+import { Route as ProjeHizmetleriRouteImport } from './routes/proje-hizmetleri'
+import { Route as ReferanslarRouteImport } from './routes/referanslar'
+import { Route as SayacAyrimiRouteImport } from './routes/sayac-ayrimi'
+import { Route as SuKacagiTespitRouteImport } from './routes/su-kacagi-tespit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GaleriRoute = GaleriRouteImport.update({
+  id: '/galeri',
+  path: '/galeri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HakkimizdaRoute = HakkimizdaRouteImport.update({
+  id: '/hakkimizda',
+  path: '/hakkimizda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HizmetlerRoute = HizmetlerRouteImport.update({
+  id: '/hizmetler',
+  path: '/hizmetler',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IletisimRoute = IletisimRouteImport.update({
+  id: '/iletisim',
+  path: '/iletisim',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IskiDanismanlikRoute = IskiDanismanlikRouteImport.update({
+  id: '/iski-danismanlik',
+  path: '/iski-danismanlik',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjeHizmetleriRoute = ProjeHizmetleriRouteImport.update({
+  id: '/proje-hizmetleri',
+  path: '/proje-hizmetleri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferanslarRoute = ReferanslarRouteImport.update({
+  id: '/referanslar',
+  path: '/referanslar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SayacAyrimiRoute = SayacAyrimiRouteImport.update({
+  id: '/sayac-ayrimi',
+  path: '/sayac-ayrimi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SuKacagiTespitRoute = SuKacagiTespitRouteImport.update({
+  id: '/su-kacagi-tespit',
+  path: '/su-kacagi-tespit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/galeri': typeof GaleriRoute
+  '/hakkimizda': typeof HakkimizdaRoute
+  '/hizmetler': typeof HizmetlerRoute
+  '/iletisim': typeof IletisimRoute
+  '/iski-danismanlik': typeof IskiDanismanlikRoute
+  '/proje-hizmetleri': typeof ProjeHizmetleriRoute
+  '/referanslar': typeof ReferanslarRoute
+  '/sayac-ayrimi': typeof SayacAyrimiRoute
+  '/su-kacagi-tespit': typeof SuKacagiTespitRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/galeri': typeof GaleriRoute
+  '/hakkimizda': typeof HakkimizdaRoute
+  '/hizmetler': typeof HizmetlerRoute
+  '/iletisim': typeof IletisimRoute
+  '/iski-danismanlik': typeof IskiDanismanlikRoute
+  '/proje-hizmetleri': typeof ProjeHizmetleriRoute
+  '/referanslar': typeof ReferanslarRoute
+  '/sayac-ayrimi': typeof SayacAyrimiRoute
+  '/su-kacagi-tespit': typeof SuKacagiTespitRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/galeri': typeof GaleriRoute
+  '/hakkimizda': typeof HakkimizdaRoute
+  '/hizmetler': typeof HizmetlerRoute
+  '/iletisim': typeof IletisimRoute
+  '/iski-danismanlik': typeof IskiDanismanlikRoute
+  '/proje-hizmetleri': typeof ProjeHizmetleriRoute
+  '/referanslar': typeof ReferanslarRoute
+  '/sayac-ayrimi': typeof SayacAyrimiRoute
+  '/su-kacagi-tespit': typeof SuKacagiTespitRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/galeri'
+    | '/hakkimizda'
+    | '/hizmetler'
+    | '/iletisim'
+    | '/iski-danismanlik'
+    | '/proje-hizmetleri'
+    | '/referanslar'
+    | '/sayac-ayrimi'
+    | '/su-kacagi-tespit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/galeri'
+    | '/hakkimizda'
+    | '/hizmetler'
+    | '/iletisim'
+    | '/iski-danismanlik'
+    | '/proje-hizmetleri'
+    | '/referanslar'
+    | '/sayac-ayrimi'
+    | '/su-kacagi-tespit'
+  id:
+    | '__root__'
+    | '/'
+    | '/galeri'
+    | '/hakkimizda'
+    | '/hizmetler'
+    | '/iletisim'
+    | '/iski-danismanlik'
+    | '/proje-hizmetleri'
+    | '/referanslar'
+    | '/sayac-ayrimi'
+    | '/su-kacagi-tespit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GaleriRoute: typeof GaleriRoute
+  HakkimizdaRoute: typeof HakkimizdaRoute
+  HizmetlerRoute: typeof HizmetlerRoute
+  IletisimRoute: typeof IletisimRoute
+  IskiDanismanlikRoute: typeof IskiDanismanlikRoute
+  ProjeHizmetleriRoute: typeof ProjeHizmetleriRoute
+  ReferanslarRoute: typeof ReferanslarRoute
+  SayacAyrimiRoute: typeof SayacAyrimiRoute
+  SuKacagiTespitRoute: typeof SuKacagiTespitRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/galeri': {
+      id: '/galeri'
+      path: '/galeri'
+      fullPath: '/galeri'
+      preLoaderRoute: typeof GaleriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hakkimizda': {
+      id: '/hakkimizda'
+      path: '/hakkimizda'
+      fullPath: '/hakkimizda'
+      preLoaderRoute: typeof HakkimizdaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hizmetler': {
+      id: '/hizmetler'
+      path: '/hizmetler'
+      fullPath: '/hizmetler'
+      preLoaderRoute: typeof HizmetlerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iletisim': {
+      id: '/iletisim'
+      path: '/iletisim'
+      fullPath: '/iletisim'
+      preLoaderRoute: typeof IletisimRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iski-danismanlik': {
+      id: '/iski-danismanlik'
+      path: '/iski-danismanlik'
+      fullPath: '/iski-danismanlik'
+      preLoaderRoute: typeof IskiDanismanlikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/proje-hizmetleri': {
+      id: '/proje-hizmetleri'
+      path: '/proje-hizmetleri'
+      fullPath: '/proje-hizmetleri'
+      preLoaderRoute: typeof ProjeHizmetleriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referanslar': {
+      id: '/referanslar'
+      path: '/referanslar'
+      fullPath: '/referanslar'
+      preLoaderRoute: typeof ReferanslarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sayac-ayrimi': {
+      id: '/sayac-ayrimi'
+      path: '/sayac-ayrimi'
+      fullPath: '/sayac-ayrimi'
+      preLoaderRoute: typeof SayacAyrimiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/su-kacagi-tespit': {
+      id: '/su-kacagi-tespit'
+      path: '/su-kacagi-tespit'
+      fullPath: '/su-kacagi-tespit'
+      preLoaderRoute: typeof SuKacagiTespitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GaleriRoute: GaleriRoute,
+  HakkimizdaRoute: HakkimizdaRoute,
+  HizmetlerRoute: HizmetlerRoute,
+  IletisimRoute: IletisimRoute,
+  IskiDanismanlikRoute: IskiDanismanlikRoute,
+  ProjeHizmetleriRoute: ProjeHizmetleriRoute,
+  ReferanslarRoute: ReferanslarRoute,
+  SayacAyrimiRoute: SayacAyrimiRoute,
+  SuKacagiTespitRoute: SuKacagiTespitRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
