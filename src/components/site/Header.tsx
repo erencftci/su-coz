@@ -36,18 +36,18 @@ export function Header() {
         </div>
       </div>
 
-      <div className="container-page flex h-18 items-center justify-between gap-4 py-3 2xl:gap-2">
+      <div className="container-page flex h-18 items-center justify-between gap-3 py-3">
         <Link to="/" aria-label="Sukaç ana sayfa" onClick={() => setOpen(false)}>
           <Logo />
         </Link>
 
-        <nav aria-label="Ana menü" className="hidden min-w-0 2xl:flex 2xl:flex-1 2xl:items-center 2xl:justify-center 2xl:gap-1">
+        <nav aria-label="Ana menü" className="hidden 2xl:flex 2xl:items-center 2xl:gap-0.5">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               activeOptions={{ exact: link.to === "/" }}
-              className="whitespace-nowrap rounded-sm px-1.5 py-2 text-[0.75rem] font-medium text-foreground/75 transition-colors hover:text-primary min-[1440px]:px-2.5 min-[1440px]:text-[0.8125rem]"
+              className="whitespace-nowrap rounded-sm px-0.5 py-2 text-[0.6875rem] font-medium tracking-tight text-foreground/75 transition-colors hover:text-primary min-[1600px]:px-1 min-[1600px]:text-[0.75rem]"
               activeProps={{ className: "text-primary" }}
             >
               {link.label}
@@ -58,7 +58,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 border border-border px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-foreground transition-colors hover:border-primary hover:text-primary md:inline-flex"
+            className="hidden items-center gap-2 border border-border px-3 py-2 text-sm font-semibold whitespace-nowrap text-foreground transition-colors hover:border-primary hover:text-primary md:inline-flex 2xl:px-2.5"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
             {site.phoneDisplay}
@@ -67,7 +67,7 @@ export function Header() {
             href={site.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-whatsapp px-4 py-2.5 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 bg-whatsapp px-3 py-2 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 2xl:px-2.5"
           >
             <WhatsAppGlyph className="h-4 w-4" />
             <span className="hidden sm:inline">WhatsApp</span>
