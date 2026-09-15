@@ -47,7 +47,7 @@ export function Header() {
               key={link.to}
               to={link.to}
               activeOptions={{ exact: link.to === "/" }}
-              className="whitespace-nowrap rounded-sm px-0.5 py-2 text-[0.6875rem] font-medium tracking-tight text-foreground/75 transition-colors hover:text-primary min-[1600px]:px-1 min-[1600px]:text-[0.75rem]"
+              className="whitespace-nowrap rounded-sm px-0.5 py-2 text-[0.75rem] font-medium text-foreground/75 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
             >
               {link.label}
