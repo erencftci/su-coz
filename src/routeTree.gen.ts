@@ -10,16 +10,24 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GaleriRouteImport } from './routes/galeri'
 import { Route as HakkimizdaRouteImport } from './routes/hakkimizda'
 import { Route as HizmetlerRouteImport } from './routes/hizmetler'
+import { Route as IletisimRouteImport } from './routes/iletisim'
 import { Route as IskiDanismanlikRouteImport } from './routes/iski-danismanlik'
 import { Route as ProjeHizmetleriRouteImport } from './routes/proje-hizmetleri'
+import { Route as ReferanslarRouteImport } from './routes/referanslar'
 import { Route as SayacAyrimiRouteImport } from './routes/sayac-ayrimi'
 import { Route as SuKacagiTespitRouteImport } from './routes/su-kacagi-tespit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GaleriRoute = GaleriRouteImport.update({
+  id: '/galeri',
+  path: '/galeri',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HakkimizdaRoute = HakkimizdaRouteImport.update({
@@ -32,6 +40,11 @@ const HizmetlerRoute = HizmetlerRouteImport.update({
   path: '/hizmetler',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IletisimRoute = IletisimRouteImport.update({
+  id: '/iletisim',
+  path: '/iletisim',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IskiDanismanlikRoute = IskiDanismanlikRouteImport.update({
   id: '/iski-danismanlik',
   path: '/iski-danismanlik',
@@ -40,6 +53,11 @@ const IskiDanismanlikRoute = IskiDanismanlikRouteImport.update({
 const ProjeHizmetleriRoute = ProjeHizmetleriRouteImport.update({
   id: '/proje-hizmetleri',
   path: '/proje-hizmetleri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferanslarRoute = ReferanslarRouteImport.update({
+  id: '/referanslar',
+  path: '/referanslar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SayacAyrimiRoute = SayacAyrimiRouteImport.update({
@@ -55,29 +73,38 @@ const SuKacagiTespitRoute = SuKacagiTespitRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/galeri': typeof GaleriRoute
   '/hakkimizda': typeof HakkimizdaRoute
   '/hizmetler': typeof HizmetlerRoute
+  '/iletisim': typeof IletisimRoute
   '/iski-danismanlik': typeof IskiDanismanlikRoute
   '/proje-hizmetleri': typeof ProjeHizmetleriRoute
+  '/referanslar': typeof ReferanslarRoute
   '/sayac-ayrimi': typeof SayacAyrimiRoute
   '/su-kacagi-tespit': typeof SuKacagiTespitRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/galeri': typeof GaleriRoute
   '/hakkimizda': typeof HakkimizdaRoute
   '/hizmetler': typeof HizmetlerRoute
+  '/iletisim': typeof IletisimRoute
   '/iski-danismanlik': typeof IskiDanismanlikRoute
   '/proje-hizmetleri': typeof ProjeHizmetleriRoute
+  '/referanslar': typeof ReferanslarRoute
   '/sayac-ayrimi': typeof SayacAyrimiRoute
   '/su-kacagi-tespit': typeof SuKacagiTespitRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/galeri': typeof GaleriRoute
   '/hakkimizda': typeof HakkimizdaRoute
   '/hizmetler': typeof HizmetlerRoute
+  '/iletisim': typeof IletisimRoute
   '/iski-danismanlik': typeof IskiDanismanlikRoute
   '/proje-hizmetleri': typeof ProjeHizmetleriRoute
+  '/referanslar': typeof ReferanslarRoute
   '/sayac-ayrimi': typeof SayacAyrimiRoute
   '/su-kacagi-tespit': typeof SuKacagiTespitRoute
 }
@@ -85,38 +112,50 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/galeri'
     | '/hakkimizda'
     | '/hizmetler'
+    | '/iletisim'
     | '/iski-danismanlik'
     | '/proje-hizmetleri'
+    | '/referanslar'
     | '/sayac-ayrimi'
     | '/su-kacagi-tespit'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/galeri'
     | '/hakkimizda'
     | '/hizmetler'
+    | '/iletisim'
     | '/iski-danismanlik'
     | '/proje-hizmetleri'
+    | '/referanslar'
     | '/sayac-ayrimi'
     | '/su-kacagi-tespit'
   id:
     | '__root__'
     | '/'
+    | '/galeri'
     | '/hakkimizda'
     | '/hizmetler'
+    | '/iletisim'
     | '/iski-danismanlik'
     | '/proje-hizmetleri'
+    | '/referanslar'
     | '/sayac-ayrimi'
     | '/su-kacagi-tespit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GaleriRoute: typeof GaleriRoute
   HakkimizdaRoute: typeof HakkimizdaRoute
   HizmetlerRoute: typeof HizmetlerRoute
+  IletisimRoute: typeof IletisimRoute
   IskiDanismanlikRoute: typeof IskiDanismanlikRoute
   ProjeHizmetleriRoute: typeof ProjeHizmetleriRoute
+  ReferanslarRoute: typeof ReferanslarRoute
   SayacAyrimiRoute: typeof SayacAyrimiRoute
   SuKacagiTespitRoute: typeof SuKacagiTespitRoute
 }
@@ -128,6 +167,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galeri': {
+      id: '/galeri'
+      path: '/galeri'
+      fullPath: '/galeri'
+      preLoaderRoute: typeof GaleriRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hakkimizda': {
@@ -144,6 +190,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HizmetlerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/iletisim': {
+      id: '/iletisim'
+      path: '/iletisim'
+      fullPath: '/iletisim'
+      preLoaderRoute: typeof IletisimRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/iski-danismanlik': {
       id: '/iski-danismanlik'
       path: '/iski-danismanlik'
@@ -156,6 +209,13 @@ declare module '@tanstack/react-router' {
       path: '/proje-hizmetleri'
       fullPath: '/proje-hizmetleri'
       preLoaderRoute: typeof ProjeHizmetleriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referanslar': {
+      id: '/referanslar'
+      path: '/referanslar'
+      fullPath: '/referanslar'
+      preLoaderRoute: typeof ReferanslarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sayac-ayrimi': {
@@ -177,10 +237,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GaleriRoute: GaleriRoute,
   HakkimizdaRoute: HakkimizdaRoute,
   HizmetlerRoute: HizmetlerRoute,
+  IletisimRoute: IletisimRoute,
   IskiDanismanlikRoute: IskiDanismanlikRoute,
   ProjeHizmetleriRoute: ProjeHizmetleriRoute,
+  ReferanslarRoute: ReferanslarRoute,
   SayacAyrimiRoute: SayacAyrimiRoute,
   SuKacagiTespitRoute: SuKacagiTespitRoute,
 }
