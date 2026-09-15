@@ -36,18 +36,18 @@ export function Header() {
         </div>
       </div>
 
-      <div className="container-page flex h-18 items-center justify-between gap-6 py-3">
+      <div className="container-page flex h-18 items-center justify-between gap-6 py-3 2xl:gap-3">
         <Link to="/" aria-label="Sukaç ana sayfa" onClick={() => setOpen(false)}>
           <Logo />
         </Link>
 
-        <nav aria-label="Ana menü" className="hidden 2xl:flex 2xl:items-center 2xl:gap-1">
+        <nav aria-label="Ana menü" className="hidden 2xl:flex 2xl:items-center 2xl:gap-0.5">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               activeOptions={{ exact: link.to === "/" }}
-              className="rounded-sm px-2.5 py-2 text-[0.8125rem] font-medium text-foreground/75 transition-colors hover:text-primary"
+              className="whitespace-nowrap rounded-sm px-0.5 py-2 text-[0.75rem] font-medium text-foreground/75 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
             >
               {link.label}
@@ -58,7 +58,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 border border-border px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-foreground transition-colors hover:border-primary hover:text-primary md:inline-flex"
+            className="hidden items-center gap-2 border border-border px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-foreground transition-colors hover:border-primary hover:text-primary md:inline-flex 2xl:px-2.5 2xl:py-2"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
             {site.phoneDisplay}
@@ -67,7 +67,7 @@ export function Header() {
             href={site.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-whatsapp px-4 py-2.5 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 bg-whatsapp px-4 py-2.5 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 2xl:px-2.5 2xl:py-2"
           >
             <WhatsAppGlyph className="h-4 w-4" />
             <span className="hidden sm:inline">WhatsApp</span>
