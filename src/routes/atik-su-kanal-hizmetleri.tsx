@@ -9,16 +9,16 @@ import { CtaBand } from "@/components/site/CtaBand";
 export const Route = createFileRoute("/atik-su-kanal-hizmetleri")({
   head: () => ({
     meta: [
-      { title: "Atık Su ve Kanal Hizmetleri | Rabi Bağlantısı ve Kanal Açılımı | Sukaç" },
+      { title: "Atık Su ve Kanal Hizmetleri | Rabıt Bağlantısı ve Kanal Açılımı | Sukaç" },
       {
         name: "description",
         content:
-          "Atık su kanal rabi bağlantısı ve tıkanık kanal açılımı: bina, apartman, villa ve sitelerde teknik değerlendirme, uygulama ve süreç takibi.",
+          "Atık su kanal rabıt bağlantısı ve tıkanık kanal açılımı: bina, apartman, villa ve sitelerde teknik değerlendirme, uygulama ve süreç takibi.",
       },
       { property: "og:title", content: "Atık Su ve Kanal Hizmetleri | Sukaç" },
       {
         property: "og:description",
-        content: "Atık su kanal rabi bağlantısı ve tıkanık kanal açılımı çalışmalarında profesyonel teknik destek.",
+        content: "Atık su kanal rabıt bağlantısı ve tıkanık kanal açılımı çalışmalarında profesyonel teknik destek.",
       },
       { property: "og:url", content: "/atik-su-kanal-hizmetleri" },
     ],
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/atik-su-kanal-hizmetleri")({
 
 const services = [
   {
-    title: "Atık Su Kanal Rabi Bağlantısı",
+    title: "Atık Su Kanal Rabıt Bağlantısı",
     text: "Yapının atık su hattının mevcut kanal sistemine bağlanmasına yönelik teknik çalışmadır. Bağlantı öncesinde hattın güzergâhı, kot durumu, boru çapı ve bağlantı noktasının uygunluğu yerinde değerlendirilir; gerekli teknik ve idari adımlar sıralanarak süreç planlanır.",
     items: [
       "Mevcut hat ve bağlantı noktasının yerinde incelenmesi",
