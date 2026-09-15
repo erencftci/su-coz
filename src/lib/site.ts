@@ -19,6 +19,7 @@ export const navLinks = [
   { to: "/sayac-ayrimi", label: "Sayaç Ayrımı" },
   { to: "/iski-danismanlik", label: "İSKİ Danışmanlık" },
   { to: "/proje-hizmetleri", label: "Proje Hizmetleri" },
+  { to: "/atik-su-kanal-hizmetleri", label: "Atık Su ve Kanal" },
   { to: "/referanslar", label: "Referanslar" },
   { to: "/galeri", label: "Galeri" },
   { to: "/iletisim", label: "İletişim" },
@@ -48,5 +49,11 @@ export const services = [
     title: "Su ve Atık Su Proje Rehberliği",
     summary:
       "İçme suyu ve atık su altyapısında proje rehberliği ve danışmanlığı, tesisat yönetimi ve proje takibi.",
+  },
+  {
+    to: "/atik-su-kanal-hizmetleri",
+    title: "Atık Su ve Kanal Hizmetleri",
+    summary:
+      "Atık Su Kanal Rabi Bağlantısı ve Tıkanık Kanal Açılımı çalışmalarında teknik değerlendirme ve uygulama desteği.",
   },
 ] as const;
