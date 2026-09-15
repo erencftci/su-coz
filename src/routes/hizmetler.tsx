@@ -83,6 +83,19 @@ const detailed = [
       "Tesisat yönetimi ve koordinasyon",
     ],
   },
+  {
+    to: "/atik-su-kanal-hizmetleri",
+    title: "Atık Su ve Kanal Hizmetleri",
+    image: planImage,
+    alt: "Atık su altyapısına ait teknik proje paftaları",
+    text: "Atık su hatlarının kanal sistemine bağlanması ve tıkanık hatların açılmasına yönelik teknik çalışmalar.",
+    items: [
+      "Atık Su Kanal Rabi Bağlantısı",
+      "Tıkanık Kanal Açılımı",
+      "Bina içi ve bina dışı atık su hatlarında uygulama",
+      "Yerinde teknik değerlendirme ve süreç takibi",
+    ],
+  },
 ];
 
 function ServicesPage() {

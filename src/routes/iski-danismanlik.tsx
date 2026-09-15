@@ -60,6 +60,10 @@ const areas = [
     title: "Saha deneyimine dayalı danışmanlık",
     text: "Uygulamada karşılaşılan durumlara dair pratik bilgiye dayanan, gerçekçi bir yol haritası.",
   },
+  {
+    title: "İSKAN İşlemleri",
+    text: "İSKAN süreçlerinde gerekli teknik ve idari işlemler konusunda danışmanlık ve süreç takibi desteği sağlanmaktadır.",
+  },
 ];
 
 function IskiPage() {

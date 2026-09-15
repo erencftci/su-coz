@@ -54,6 +54,6 @@ export const services = [
     to: "/atik-su-kanal-hizmetleri",
     title: "Atık Su ve Kanal Hizmetleri",
     summary:
-      "Atık su kanal rabıt bağlantısı ve tıkanık kanal açılımı çalışmalarında teknik değerlendirme ve uygulama desteği.",
+      "Atık Su Kanal Rabi Bağlantısı ve Tıkanık Kanal Açılımı çalışmalarında teknik değerlendirme ve uygulama desteği.",
   },
 ] as const;
