@@ -90,7 +90,7 @@ const detailed = [
     alt: "Atık su altyapısına ait teknik proje paftaları",
     text: "Atık su hatlarının kanal sistemine bağlanması ve tıkanık hatların açılmasına yönelik teknik çalışmalar.",
     items: [
-      "Atık Su Kanal Rabi Bağlantısı",
+      "Atık Su Kanal Rabıt Bağlantısı",
       "Tıkanık Kanal Açılımı",
       "Bina içi ve bina dışı atık su hatlarında uygulama",
       "Yerinde teknik değerlendirme ve süreç takibi",
