@@ -41,7 +41,7 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav aria-label="Ana menü" className="hidden xl:flex xl:items-center xl:gap-1">
+        <nav aria-label="Ana menü" className="hidden 2xl:flex 2xl:items-center 2xl:gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -77,7 +77,7 @@ export function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
-            className="inline-flex h-11 w-11 items-center justify-center border border-border text-foreground xl:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center border border-border text-foreground 2xl:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -85,7 +85,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="fixed inset-x-0 top-[4.5rem] bottom-0 z-40 overflow-y-auto border-t border-border bg-background xl:hidden">
+        <div className="fixed inset-x-0 top-[4.5rem] bottom-0 z-40 overflow-y-auto border-t border-border bg-background 2xl:hidden">
           <nav aria-label="Mobil menü" className="container-page flex flex-col py-6">
             {primaryNav.map((link) => (
               <Link
