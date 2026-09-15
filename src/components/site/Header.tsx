@@ -58,7 +58,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary md:inline-flex"
+            className="hidden items-center gap-2 border border-border px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-foreground transition-colors hover:border-primary hover:text-primary md:inline-flex"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
             {site.phoneDisplay}
