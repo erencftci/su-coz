@@ -36,18 +36,18 @@ export function Header() {
         </div>
       </div>
 
-      <div className="container-page flex h-18 items-center justify-between gap-6 py-3">
+      <div className="container-page flex h-18 items-center justify-between gap-4 py-3 2xl:gap-2">
         <Link to="/" aria-label="Sukaç ana sayfa" onClick={() => setOpen(false)}>
           <Logo />
         </Link>
 
-        <nav aria-label="Ana menü" className="hidden 2xl:flex 2xl:items-center 2xl:gap-1">
+        <nav aria-label="Ana menü" className="hidden min-w-0 2xl:flex 2xl:flex-1 2xl:items-center 2xl:justify-center 2xl:gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               activeOptions={{ exact: link.to === "/" }}
-              className="rounded-sm px-2.5 py-2 text-[0.8125rem] font-medium text-foreground/75 transition-colors hover:text-primary"
+              className="whitespace-nowrap rounded-sm px-1.5 py-2 text-[0.75rem] font-medium text-foreground/75 transition-colors hover:text-primary min-[1440px]:px-2.5 min-[1440px]:text-[0.8125rem]"
               activeProps={{ className: "text-primary" }}
             >
               {link.label}
