@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { navLinks, site } from "@/lib/site";
@@ -41,17 +41,21 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav aria-label="Ana menü" className="hidden 2xl:flex 2xl:items-center 2xl:gap-0.5">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              activeOptions={{ exact: link.to === "/" }}
-              className="whitespace-nowrap rounded-sm px-0.5 py-2 text-[0.75rem] font-medium text-foreground/75 transition-colors hover:text-primary"
-              activeProps={{ className: "text-primary" }}
-            >
-              {link.label}
-            </Link>
+        <nav aria-label="Ana menü" className="hidden 2xl:flex 2xl:items-center">
+          {navLinks.map((link, i) => (
+            <Fragment key={link.to}>
+              <Link
+                to={link.to}
+                activeOptions={{ exact: link.to === "/" }}
+                className="whitespace-nowrap rounded-sm px-0.5 py-2 text-[0.75rem] font-medium text-foreground/75 transition-colors hover:text-primary"
+                activeProps={{ className: "text-primary" }}
+              >
+                {link.label}
+              </Link>
+              {i < navLinks.length - 1 ? (
+                <span className="mx-0.5 h-3.5 w-px bg-foreground/15" aria-hidden="true" />
+              ) : null}
+            </Fragment>
           ))}
         </nav>
 
