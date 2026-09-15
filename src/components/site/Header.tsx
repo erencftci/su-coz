@@ -53,7 +53,7 @@ export function Header() {
                 {link.label}
               </Link>
               {i < navLinks.length - 1 ? (
-                <span className="h-3.5 w-px bg-border/70" aria-hidden="true" />
+                <span className="mx-0.5 h-3.5 w-px bg-foreground/15" aria-hidden="true" />
               ) : null}
             </Fragment>
           ))}
