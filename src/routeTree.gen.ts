@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AtikSuKanalHizmetleriRouteImport } from './routes/atik-su-kanal-hizmetleri'
 import { Route as GaleriRouteImport } from './routes/galeri'
 import { Route as HakkimizdaRouteImport } from './routes/hakkimizda'
 import { Route as HizmetlerRouteImport } from './routes/hizmetler'
@@ -23,6 +24,11 @@ import { Route as SuKacagiTespitRouteImport } from './routes/su-kacagi-tespit'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtikSuKanalHizmetleriRoute = AtikSuKanalHizmetleriRouteImport.update({
+  id: '/atik-su-kanal-hizmetleri',
+  path: '/atik-su-kanal-hizmetleri',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GaleriRoute = GaleriRouteImport.update({
@@ -73,6 +79,7 @@ const SuKacagiTespitRoute = SuKacagiTespitRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/atik-su-kanal-hizmetleri': typeof AtikSuKanalHizmetleriRoute
   '/galeri': typeof GaleriRoute
   '/hakkimizda': typeof HakkimizdaRoute
   '/hizmetler': typeof HizmetlerRoute
@@ -85,6 +92,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/atik-su-kanal-hizmetleri': typeof AtikSuKanalHizmetleriRoute
   '/galeri': typeof GaleriRoute
   '/hakkimizda': typeof HakkimizdaRoute
   '/hizmetler': typeof HizmetlerRoute
@@ -98,6 +106,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/atik-su-kanal-hizmetleri': typeof AtikSuKanalHizmetleriRoute
   '/galeri': typeof GaleriRoute
   '/hakkimizda': typeof HakkimizdaRoute
   '/hizmetler': typeof HizmetlerRoute
@@ -112,6 +121,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/atik-su-kanal-hizmetleri'
     | '/galeri'
     | '/hakkimizda'
     | '/hizmetler'
@@ -124,6 +134,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/atik-su-kanal-hizmetleri'
     | '/galeri'
     | '/hakkimizda'
     | '/hizmetler'
@@ -136,6 +147,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/atik-su-kanal-hizmetleri'
     | '/galeri'
     | '/hakkimizda'
     | '/hizmetler'
@@ -149,6 +161,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AtikSuKanalHizmetleriRoute: typeof AtikSuKanalHizmetleriRoute
   GaleriRoute: typeof GaleriRoute
   HakkimizdaRoute: typeof HakkimizdaRoute
   HizmetlerRoute: typeof HizmetlerRoute
@@ -167,6 +180,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atik-su-kanal-hizmetleri': {
+      id: '/atik-su-kanal-hizmetleri'
+      path: '/atik-su-kanal-hizmetleri'
+      fullPath: '/atik-su-kanal-hizmetleri'
+      preLoaderRoute: typeof AtikSuKanalHizmetleriRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/galeri': {
@@ -237,6 +257,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AtikSuKanalHizmetleriRoute: AtikSuKanalHizmetleriRoute,
   GaleriRoute: GaleriRoute,
   HakkimizdaRoute: HakkimizdaRoute,
   HizmetlerRoute: HizmetlerRoute,

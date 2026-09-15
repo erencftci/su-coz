@@ -105,7 +105,7 @@ function ServicesPage() {
         breadcrumb="Hizmetler"
         eyebrow="Hizmet Kapsamı"
         title="Su kaçağı tespitinden proje danışmanlığına uzanan teknik hizmetler"
-        description="Sukaç, suyla ilgili teknik süreçleri dört ana başlıkta ele alır. Her hizmet, yapının durumuna ve talebe göre kapsamı tanımlanarak yürütülür."
+        description="Sukaç, suyla ilgili teknik süreçleri beş ana başlıkta ele alır. Her hizmet, yapının durumuna ve talebe göre kapsamı tanımlanarak yürütülür."
       />
 
       <section className="section-y">
