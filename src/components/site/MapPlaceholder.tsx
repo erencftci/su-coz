@@ -1,29 +1,22 @@
-import { MapPin } from "lucide-react";
-import { site } from "@/lib/site";
+const apiKey = import.meta.env["VITE_GOOGLE_MAPS_EMBED_KEY"] as string | undefined;
+
+// İstanbul geneline ait nötr bir harita görünümü; işaretçi veya adres kullanılmaz.
+const center = { lat: 41.0082, lng: 28.9784, zoom: 11 };
+
+const mapSrc = apiKey
+  ? `https://www.google.com/maps/embed/v1/view?key=${apiKey}&center=${center.lat},${center.lng}&zoom=${center.zoom}&maptype=roadmap`
+  : `https://maps.google.com/maps?ll=${center.lat},${center.lng}&z=${center.zoom}&t=m&output=embed`;
 
 export function MapPlaceholder() {
   return (
     <div className="relative overflow-hidden border border-border bg-secondary">
-      <div
-        className="absolute inset-0 opacity-70"
-        aria-hidden="true"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, oklch(0.24 0.05 259 / 0.08) 1px, transparent 1px), linear-gradient(to bottom, oklch(0.24 0.05 259 / 0.08) 1px, transparent 1px)",
-          backgroundSize: "44px 44px",
-        }}
+      <iframe
+        src={mapSrc}
+        title="Harita görünümü"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="block h-[18rem] w-full border-0 md:h-[22rem]"
       />
-      <div className="relative flex min-h-[18rem] flex-col items-center justify-center px-6 py-16 text-center md:min-h-[22rem]">
-        <span className="inline-flex h-12 w-12 items-center justify-center border border-primary/40 bg-background text-primary">
-          <MapPin className="h-5 w-5" aria-hidden="true" />
-        </span>
-        <p className="mt-6 font-display text-lg font-semibold text-foreground">Harita alanı</p>
-        <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-          Konum bilgisi güncellendiğinde bu alana Google Haritalar görünümü eklenecektir. Bu süreçte iletişim için
-          telefon ve WhatsApp kanallarını kullanabilirsiniz.
-        </p>
-        <p className="mt-5 text-sm font-semibold text-navy">{site.phoneDisplay}</p>
-      </div>
     </div>
   );
 }

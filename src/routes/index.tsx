@@ -104,6 +104,10 @@ function HomePage() {
             <h1 className="mt-6 max-w-4xl font-display text-[2rem] leading-[1.08] font-semibold sm:text-4xl md:text-5xl lg:text-[3.5rem]">
               Su Kaçağı Tespiti ve Su Altyapı Çözümlerinde Profesyonel Destek
             </h1>
+            <p className="mt-7 inline-flex items-center gap-3 border-l-2 border-primary bg-navy-foreground/5 px-5 py-3 font-display text-sm font-semibold tracking-[0.18em] text-navy-foreground uppercase sm:text-base">
+              <span className="h-1.5 w-1.5 shrink-0 bg-primary" aria-hidden="true" />
+              27+ Yıllık İSKİ Deneyimi
+            </p>
             <p className="mt-7 max-w-2xl text-base leading-relaxed text-steel md:text-lg">
               Sukaç; gizli su kaçağı tespiti, bina ve site su sistemleri, İSKİ süreçlerinde danışmanlık ve su/atık su
               projelerinde rehberlik alanlarında saha deneyimine dayalı teknik hizmet sunar.
