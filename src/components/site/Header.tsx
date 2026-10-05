@@ -2,13 +2,13 @@ import { Link } from "@tanstack/react-router";
 import { Fragment, useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
-import { navLinks, site } from "@/lib/site";
+import { visibleNavLinks, site } from "@/lib/site";
 
-const primaryNav = navLinks.filter((l) =>
+const primaryNav = visibleNavLinks.filter((l) =>
   ["/", "/hakkimizda", "/hizmetler", "/referanslar", "/galeri", "/iletisim"].includes(l.to),
 );
 
-const serviceNav = navLinks.filter((l) =>
+const serviceNav = visibleNavLinks.filter((l) =>
   ["/su-kacagi-tespit", "/sayac-ayrimi", "/iski-danismanlik", "/proje-hizmetleri"].includes(l.to),
 );
 
@@ -42,7 +42,7 @@ export function Header() {
         </Link>
 
         <nav aria-label="Ana menü" className="hidden 2xl:flex 2xl:items-center">
-          {navLinks.map((link, i) => (
+          {visibleNavLinks.map((link, i) => (
             <Fragment key={link.to}>
               <Link
                 to={link.to}
@@ -52,7 +52,7 @@ export function Header() {
               >
                 {link.label}
               </Link>
-              {i < navLinks.length - 1 ? (
+              {i < visibleNavLinks.length - 1 ? (
                 <span className="mx-0.5 h-3.5 w-px bg-foreground/15" aria-hidden="true" />
               ) : null}
             </Fragment>

@@ -2,9 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { Clock, Phone, ShieldAlert } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { WhatsAppGlyph } from "@/components/site/Header";
-import { navLinks, services, site } from "@/lib/site";
+import { visibleNavLinks, services, site } from "@/lib/site";
 
-const corporateNav = navLinks.filter((l) =>
+const corporateNav = visibleNavLinks.filter((l) =>
   ["/", "/hakkimizda", "/hizmetler", "/referanslar", "/galeri", "/iletisim"].includes(l.to),
 );
 
