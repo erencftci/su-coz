@@ -25,6 +25,15 @@ export const navLinks = [
   { to: "/iletisim", label: "İletişim" },
 ] as const;
 
+// Referans bölümü/projesi yayında görünmez; referanslar biriktikçe burası true
+// yapılırsa menü, alt bilgi, ana sayfa ve /referanslar sayfası olduğu gibi döner.
+export const features = { references: false } as const;
+
+// Menü ve alt bilgide gösterilen bağlantılar; kapalı özellikler burada elenir.
+export const visibleNavLinks = navLinks.filter(
+  (l) => features.references || l.to !== "/referanslar",
+);
+
 export const services = [
   {
     to: "/su-kacagi-tespit",
