@@ -21,7 +21,7 @@ import { CtaBand } from "@/components/site/CtaBand";
 import { ContactForm } from "@/components/site/ContactForm";
 import { MapPlaceholder } from "@/components/site/MapPlaceholder";
 import { WhatsAppGlyph } from "@/components/site/Header";
-import { services, site } from "@/lib/site";
+import { features, services, site } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -264,7 +264,8 @@ function HomePage() {
 
       <CtaBand />
 
-      {/* REFERENCES */}
+      {/* REFERENCES — features.references açılınca yeniden görünür olur */}
+      {features.references ? (
       <section className="section-y">
         <div className="container-page">
           <SectionHeading
@@ -300,6 +301,7 @@ function HomePage() {
           </Reveal>
         </div>
       </section>
+      ) : null}
 
       {/* GALLERY */}
       <section className="section-y bg-navy-deep text-navy-foreground">

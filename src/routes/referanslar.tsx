@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { features } from "@/lib/site";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
@@ -8,6 +9,7 @@ import { CtaBand } from "@/components/site/CtaBand";
 export const Route = createFileRoute("/referanslar")({
   head: () => ({
     meta: [
+      ...(features.references ? [] : [{ name: "robots", content: "noindex" }]),
       { title: "Referanslar | Tamamlanan Çalışmalar | Sukaç" },
       {
         name: "description",
